@@ -1,53 +1,309 @@
 fileFormatVersion: 2
-guid: 0eb01132f7ae3a646a6e9b9543410108
+guid: 69f884fb85715404d8b509883abdc9c2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Box001
     100002: Box002
     100004: Box003
-    100006: //RootNode
-    100008: Cylinder001
-    100010: Cylinder002
-    100012: Cylinder003
-    100014: Cylinder004
-    100016: Torus001
+    100006: Box004
+    100008: Box005
+    100010: Box006
+    100012: Box007
+    100014: Box008
+    100016: Box017
+    100018: Box018
+    100020: Box019
+    100022: Box020
+    100024: Box021
+    100026: Box024
+    100028: Capsule001
+    100030: Capsule002
+    100032: Capsule003
+    100034: Capsule004
+    100036: //RootNode
+    100038: Car Door
+    100040: ChamferBox001
+    100042: ChamferBox003
+    100044: Cylinder001
+    100046: Cylinder002
+    100048: Cylinder003
+    100050: Cylinder006
+    100052: Cylinder007
+    100054: Cylinder009
+    100056: Cylinder010
+    100058: Cylinder011
+    100060: Cylinder012
+    100062: Cylinder022
+    100064: Cylinder023
+    100066: Cylinder024
+    100068: Cylinder025
+    100070: Cylinder026
+    100072: Cylinder027
+    100074: Cylinder028
+    100076: Object001
+    100078: Object002
+    100080: OilTank001
+    100082: OilTank002
+    100084: OilTank003
+    100086: OilTank004
+    100088: TextPlus003
     400000: Box001
     400002: Box002
     400004: Box003
-    400006: //RootNode
-    400008: Cylinder001
-    400010: Cylinder002
-    400012: Cylinder003
-    400014: Cylinder004
-    400016: Torus001
-    2100000: No Name
+    400006: Box004
+    400008: Box005
+    400010: Box006
+    400012: Box007
+    400014: Box008
+    400016: Box017
+    400018: Box018
+    400020: Box019
+    400022: Box020
+    400024: Box021
+    400026: Box024
+    400028: Capsule001
+    400030: Capsule002
+    400032: Capsule003
+    400034: Capsule004
+    400036: //RootNode
+    400038: Car Door
+    400040: ChamferBox001
+    400042: ChamferBox003
+    400044: Cylinder001
+    400046: Cylinder002
+    400048: Cylinder003
+    400050: Cylinder006
+    400052: Cylinder007
+    400054: Cylinder009
+    400056: Cylinder010
+    400058: Cylinder011
+    400060: Cylinder012
+    400062: Cylinder022
+    400064: Cylinder023
+    400066: Cylinder024
+    400068: Cylinder025
+    400070: Cylinder026
+    400072: Cylinder027
+    400074: Cylinder028
+    400076: Object001
+    400078: Object002
+    400080: OilTank001
+    400082: OilTank002
+    400084: OilTank003
+    400086: OilTank004
+    400088: TextPlus003
+    2100000: Car Dash Main
+    2100002: Wood Accent
+    2100004: Dash Chrome
+    2100006: Car Black Acessories
+    2100008: No Name
+    2100010: Car Chrome Acessories
+    2100012: Car Hood
+    2100014: Glass
+    2100016: Car Roof
+    2100018: Mirror
+    2100020: Metal_Aluminum Aluminum - Polished
+    2100022: Steering Wheel
+    2100024: Outer Rim Logo
     2300000: Box001
     2300002: Box002
     2300004: Box003
-    2300006: Cylinder001
-    2300008: Cylinder002
-    2300010: Cylinder003
-    2300012: Cylinder004
-    2300014: Torus001
+    2300006: Box004
+    2300008: Box005
+    2300010: Box006
+    2300012: Box007
+    2300014: Box008
+    2300016: Box017
+    2300018: Box018
+    2300020: Box019
+    2300022: Box020
+    2300024: Box021
+    2300026: Box024
+    2300028: Capsule001
+    2300030: Capsule002
+    2300032: Capsule003
+    2300034: Capsule004
+    2300036: Car Door
+    2300038: ChamferBox001
+    2300040: ChamferBox003
+    2300042: Cylinder001
+    2300044: Cylinder002
+    2300046: Cylinder003
+    2300048: Cylinder006
+    2300050: Cylinder007
+    2300052: Cylinder009
+    2300054: Cylinder010
+    2300056: Cylinder011
+    2300058: Cylinder012
+    2300060: Cylinder022
+    2300062: Cylinder023
+    2300064: Cylinder024
+    2300066: Cylinder025
+    2300068: Cylinder026
+    2300070: Cylinder027
+    2300072: Cylinder028
+    2300074: Object001
+    2300076: Object002
+    2300078: OilTank001
+    2300080: OilTank002
+    2300082: OilTank003
+    2300084: OilTank004
+    2300086: TextPlus003
     3300000: Box001
     3300002: Box002
     3300004: Box003
-    3300006: Cylinder001
-    3300008: Cylinder002
-    3300010: Cylinder003
-    3300012: Cylinder004
-    3300014: Torus001
+    3300006: Box004
+    3300008: Box005
+    3300010: Box006
+    3300012: Box007
+    3300014: Box008
+    3300016: Box017
+    3300018: Box018
+    3300020: Box019
+    3300022: Box020
+    3300024: Box021
+    3300026: Box024
+    3300028: Capsule001
+    3300030: Capsule002
+    3300032: Capsule003
+    3300034: Capsule004
+    3300036: Car Door
+    3300038: ChamferBox001
+    3300040: ChamferBox003
+    3300042: Cylinder001
+    3300044: Cylinder002
+    3300046: Cylinder003
+    3300048: Cylinder006
+    3300050: Cylinder007
+    3300052: Cylinder009
+    3300054: Cylinder010
+    3300056: Cylinder011
+    3300058: Cylinder012
+    3300060: Cylinder022
+    3300062: Cylinder023
+    3300064: Cylinder024
+    3300066: Cylinder025
+    3300068: Cylinder026
+    3300070: Cylinder027
+    3300072: Cylinder028
+    3300074: Object001
+    3300076: Object002
+    3300078: OilTank001
+    3300080: OilTank002
+    3300082: OilTank003
+    3300084: OilTank004
+    3300086: TextPlus003
     4300000: Box001
-    4300002: Torus001
-    4300004: Cylinder001
-    4300006: Cylinder002
-    4300008: Cylinder003
-    4300010: Box002
-    4300012: Cylinder004
-    4300014: Box003
-    2186277476908879412: ImportLogs
-  externalObjects: {}
+    4300002: Cylinder001
+    4300004: Cylinder002
+    4300006: Cylinder003
+    4300008: Box002
+    4300010: Box003
+    4300012: Cylinder006
+    4300014: Box004
+    4300016: Box005
+    4300018: Box006
+    4300020: Cylinder007
+    4300022: Cylinder009
+    4300024: Box007
+    4300026: Cylinder010
+    4300028: Cylinder011
+    4300030: Box008
+    4300032: Cylinder012
+    4300034: ChamferBox001
+    4300036: Object001
+    4300038: Box017
+    4300040: Box018
+    4300042: ChamferBox003
+    4300044: Box019
+    4300046: Box020
+    4300048: Box021
+    4300050: Cylinder022
+    4300052: Cylinder023
+    4300054: Box024
+    4300056: Capsule001
+    4300058: Object002
+    4300060: OilTank001
+    4300062: Cylinder024
+    4300064: Cylinder025
+    4300066: OilTank002
+    4300068: OilTank003
+    4300070: OilTank004
+    4300072: Capsule002
+    4300074: Cylinder026
+    4300076: Capsule003
+    4300078: Cylinder027
+    4300080: Capsule004
+    4300082: Cylinder028
+    4300084: TextPlus003
+    4300086: Car Door
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car Black Acessories
+    second: {fileID: 2100000, guid: 96c04d379e50e4340b2891905152398a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car Chrome Acessories
+    second: {fileID: 2100000, guid: 7dcb9e8569dda6946a0c5177e2649885, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car Dash Main
+    second: {fileID: 2100000, guid: 173b12e8e3cbc4d428edc5ea88792fba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car Hood
+    second: {fileID: 2100000, guid: 192fb6154c01d23419eef0317cde99c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car Roof
+    second: {fileID: 2100000, guid: c033433adb9f75a40bc9b8fc16c85ca9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dash Chrome
+    second: {fileID: 2100000, guid: bd88f0761a7bf0e4dbe8d2f380cd213b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 0de554957bac14e48b3a8138c93ff674, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Aluminum Aluminum - Polished
+    second: {fileID: 2100000, guid: c7f165039191a644ba47a6fbd7b3f4f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mirror
+    second: {fileID: 2100000, guid: 8055f25e9b9420d468c836f10e587179, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: c5dd549b9851cd847b7b05837d96855b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outer Rim Logo
+    second: {fileID: 2100000, guid: 45bedcec91835bd4781c9de09caf6ca5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steering Wheel
+    second: {fileID: 2100000, guid: 07432c4d733e7be45abd0a7a42b63a1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Accent
+    second: {fileID: 2100000, guid: 986d20083ca8b4643992e2a0b75798bf, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

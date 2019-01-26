@@ -7,6 +7,7 @@ public class CarMovement : MonoBehaviour
     public static CarMovement Instance;
     public Transform stopLocation;
     public float autoMoveSpeed;
+    public Animator wheelAnimator;
 
     public float speed;
     public float clamp;
@@ -38,6 +39,7 @@ public class CarMovement : MonoBehaviour
     private void Move()
     {
         xMove = Mathf.Lerp(xMove, Input.GetAxisRaw("Horizontal"), inputDelay);
+        wheelAnimator.SetFloat("TurnAngle", xMove);
         Vector3 movement = new Vector3(xMove, 0, 0);
         movement *= speed * Time.unscaledDeltaTime;
         transform.position += movement;
