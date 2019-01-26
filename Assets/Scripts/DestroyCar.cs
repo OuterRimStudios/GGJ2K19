@@ -6,6 +6,6 @@ public class DestroyCar : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other);
+        Destroy(other.gameObject);
     }
 }

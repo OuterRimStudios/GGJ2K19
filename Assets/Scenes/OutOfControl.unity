@@ -779,7 +779,7 @@ MonoBehaviour:
   distanceSlider: {fileID: 741691465}
   distanceText: {fileID: 1713328666}
   timeScaleMax: 1.5
-  timeToHome: 20
+  timeToHome: 120
   gameOverPanel: {fileID: 708229908}
   winPanel: {fileID: 247696017}
 --- !u!4 &244885884
@@ -813,7 +813,7 @@ MonoBehaviour:
   - {fileID: 106453466}
   minSpawn: 1
   maxSpawn: 2
-  spawnInterval: 2
+  spawnInterval: 3
 --- !u!1 &247696017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,7 +2629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3bbad934248f844a9b8b008a8c0465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 6
   clamp: 4.5
 --- !u!1 &1446860106
 GameObject:
@@ -3338,8 +3338,9 @@ GameObject:
   - component: {fileID: 1721831235}
   - component: {fileID: 1721831237}
   - component: {fileID: 1721831236}
+  - component: {fileID: 1721831238}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: KillBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3381,6 +3382,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1721831238
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1721831234}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1725440056
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ public class OutOfControlManager : MonoBehaviour {
         //Not home yet
         if (timeElapsed < timeToHome)
         {
-            distanceText.text = ((int)((timeElapsed / timeToHome) * 1000)).ToString() + " m";
+            distanceText.text = (1000 - (int)((timeElapsed / timeToHome) * 1000)).ToString() + " m";
             distanceSlider.value = (timeElapsed / timeToHome);
             return false;
         }
@@ -60,7 +60,6 @@ public class OutOfControlManager : MonoBehaviour {
         {
             yield return new WaitForSecondsRealtime(15f);
             Time.timeScale = Random.Range(1, timeScaleMax);
-            print(Time.timeScale);
         }
     }
 
