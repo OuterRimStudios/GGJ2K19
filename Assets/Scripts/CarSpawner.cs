@@ -28,7 +28,7 @@ public class CarSpawner : MonoBehaviour
 
         for (int i = 0; i < amountToSpawn; i++)
             Instantiate(car, spawnLocation[i].position, spawnLocation[i].rotation);
-        yield return new WaitForSeconds(spawnInterval);
+        yield return new WaitForSecondsRealtime(spawnInterval);
         spawning = false;
     }
 }
