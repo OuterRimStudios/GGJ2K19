@@ -10,10 +10,17 @@ public class CarSpawner : MonoBehaviour
     public int maxSpawn;
     public float spawnInterval;
 
+    public static bool CanSpawn;
     bool spawning;
+
+    private void Start()
+    {
+        CanSpawn = true;
+    }
 
     private void Update()
     {
+        if (!CanSpawn) return;
         if(!spawning)
         {
             spawning = true;
@@ -27,7 +34,10 @@ public class CarSpawner : MonoBehaviour
         List<Transform> spawnLocation = Utilities.GetRandomItems(spawnPositions, amountToSpawn);
 
         for (int i = 0; i < amountToSpawn; i++)
-            Instantiate(car, spawnLocation[i].position, spawnLocation[i].rotation);
+        {
+            GameObject enemy = Instantiate(car, spawnLocation[i].position, spawnLocation[i].rotation);
+            OutOfControlManager.Instance.AddEnemy(enemy.transform);
+        }
         yield return new WaitForSecondsRealtime(spawnInterval);
         spawning = false;
     }

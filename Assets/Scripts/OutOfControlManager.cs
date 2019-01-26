@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class OutOfControlManager : MonoBehaviour {
-
+public class OutOfControlManager : MonoBehaviour
+{
     public static OutOfControlManager Instance;
     public Slider distanceSlider;
     public TextMeshProUGUI distanceText;
@@ -16,7 +16,10 @@ public class OutOfControlManager : MonoBehaviour {
     float startTime;
 
     public GameObject gameOverPanel;
-    public GameObject winPanel;
+    public Animator house;
+
+    [HideInInspector]
+    public List<Transform> activeEnemies;
 
     private void Awake()
     {
@@ -34,9 +37,12 @@ public class OutOfControlManager : MonoBehaviour {
     {
         startTime = Time.time;
         yield return new WaitUntil(CheckTime);
-        winPanel.SetActive(true);
+        CarMovement.Instance.Arrived();
+        CarSpawner.CanSpawn = false;
         Time.timeScale = 1;     //reset timescale
         StopAllCoroutines();
+
+        house.SetTrigger("Land");
     }
 
     bool CheckTime()
@@ -61,6 +67,18 @@ public class OutOfControlManager : MonoBehaviour {
             yield return new WaitForSecondsRealtime(15f);
             Time.timeScale = Random.Range(1, timeScaleMax);
         }
+    }
+
+    public void AddEnemy(Transform enemy)
+    {
+        if (!activeEnemies.Contains(enemy))
+            activeEnemies.Add(enemy);
+    }
+
+    public void RemoveEnemy(Transform enemy)
+    {
+        if (activeEnemies.Contains(enemy))
+            activeEnemies.Remove(enemy);
     }
 
     public void GameOver()
