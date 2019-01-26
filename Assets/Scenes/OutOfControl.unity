@@ -779,7 +779,7 @@ MonoBehaviour:
   distanceSlider: {fileID: 741691465}
   distanceText: {fileID: 1713328666}
   timeScaleMax: 1.5
-  timeToHome: 120
+  timeToHome: 80
   gameOverPanel: {fileID: 708229908}
   winPanel: {fileID: 247696017}
 --- !u!4 &244885884
@@ -813,7 +813,7 @@ MonoBehaviour:
   - {fileID: 106453466}
   minSpawn: 1
   maxSpawn: 2
-  spawnInterval: 3
+  spawnInterval: 2
 --- !u!1 &247696017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,8 +2629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3bbad934248f844a9b8b008a8c0465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 8
   clamp: 4.5
+  inputDelay: 0.01
 --- !u!1 &1446860106
 GameObject:
   m_ObjectHideFlags: 0
