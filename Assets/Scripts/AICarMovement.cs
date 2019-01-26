@@ -10,4 +10,13 @@ public class AICarMovement : MonoBehaviour
     {
         transform.position += transform.forward * speed * Time.deltaTime;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag.Equals("Player"))
+        {
+            print("Game Over");
+            //OutOfControlManager.GameOver();
+        }
+    }
 }
