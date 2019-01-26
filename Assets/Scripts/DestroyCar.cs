@@ -6,7 +6,14 @@ public class DestroyCar : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        OutOfControlManager.Instance.RemoveEnemy(other.transform);
-        Destroy(other.gameObject);
+        if(other.tag.Equals("Car"))
+        {
+            OutOfControlManager.Instance.RemoveEnemy(other.transform);
+            Destroy(other.gameObject);
+        }
+        else if(other.tag.Equals("Environment"))
+        {
+            other.gameObject.SetActive(false);
+        }
     }
 }
