@@ -16,6 +16,9 @@ public class ChaseMovement : MonoBehaviour {
     public Vector3 boxCastHalfExtents;
     public LayerMask groundLayer;
 
+    public Animator animator;
+    public float animationSmoothTime = .5f;
+
     float initialGravity;
     float verticalVelocity;
     bool isGrounded;
@@ -43,6 +46,9 @@ public class ChaseMovement : MonoBehaviour {
             speed += speedIncreaseAmount;
             keyAlternate = false;
         }
+
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", speed, animationSmoothTime, Time.unscaledDeltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             Jump();
