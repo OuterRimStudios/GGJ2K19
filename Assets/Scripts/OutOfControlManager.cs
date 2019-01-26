@@ -6,6 +6,7 @@ using TMPro;
 
 public class OutOfControlManager : MonoBehaviour {
 
+    public static OutOfControlManager Instance;
     public Slider distanceSlider;
     public TextMeshProUGUI distanceText;
 
@@ -14,8 +15,12 @@ public class OutOfControlManager : MonoBehaviour {
     public float timeToHome = 30f;
     float startTime;
 
+    public GameObject gameOverPanel;
+    public GameObject winPanel;
+
     private void Awake()
     {
+        Instance = this;
         Time.timeScale = 1;
     }
 
@@ -29,7 +34,7 @@ public class OutOfControlManager : MonoBehaviour {
     {
         startTime = Time.time;
         yield return new WaitUntil(CheckTime);
-        print("at home");
+        winPanel.SetActive(true);
         Time.timeScale = 1;     //reset timescale
         StopAllCoroutines();
     }
@@ -59,8 +64,9 @@ public class OutOfControlManager : MonoBehaviour {
         }
     }
 
-    public static void GameOver()
+    public void GameOver()
     {
-
+        StopAllCoroutines();
+        gameOverPanel.SetActive(true);
     }
 }

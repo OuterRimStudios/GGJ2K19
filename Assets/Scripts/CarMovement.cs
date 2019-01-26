@@ -10,7 +10,7 @@ public class CarMovement : MonoBehaviour
     private void Update()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-        movement *= speed * Time.deltaTime;
+        movement *= speed * Time.unscaledDeltaTime;
         transform.position += movement;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -clamp, clamp), 0, 0);
     }
