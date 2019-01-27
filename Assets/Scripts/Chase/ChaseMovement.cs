@@ -25,7 +25,6 @@ public class ChaseMovement : MonoBehaviour {
     [Space, Header("Sounds")]
     public List<AudioClip> footsteps;
     public List<AudioClip> jumps;
-    public List<AudioClip> lands;
 
     AudioSource source;
 
@@ -76,7 +75,7 @@ public class ChaseMovement : MonoBehaviour {
             speed = Mathf.Lerp(speed, 0, 5f * Time.unscaledDeltaTime);
 
 
-      //  speed = Mathf.Clamp(speed, 0, maxSpeed);
+        speed = Mathf.Clamp(speed, 0, maxSpeed);
         transform.position = Vector3.Lerp(transform.position, transform.position + transform.forward, speed * Time.unscaledDeltaTime);
         transform.position += new Vector3(0, verticalVelocity * Time.unscaledDeltaTime, 0) + transform.forward * forwardJumpSpeed * Time.unscaledDeltaTime;
         Fall();
@@ -96,7 +95,6 @@ public class ChaseMovement : MonoBehaviour {
 
         if (verticalVelocity < 0 && isGrounded)
         {
-            source.PlayOneShot(Utilities.GetRandomItem(lands));
             verticalVelocity = 0;
             gravity = initialGravity;
             isFalling = false;
