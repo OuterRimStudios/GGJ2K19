@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public GameObject mainMenu;
     public GameObject outOfControlGame;
     public GameObject chaseGame;
     public GameObject winRoom;
@@ -45,5 +46,16 @@ public class GameManager : MonoBehaviour
         gameOverRoom.SetActive(true);
         gameOverAnimator.SetBool("GameOver", true);
         cameraAnimator.SetBool("GameOver", true);
+    }
+
+    public void StartGame()
+    {
+        mainMenu.SetActive(false);
+        outOfControlGame.SetActive(true);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

@@ -35,13 +35,13 @@ public class ChaseMovement : MonoBehaviour {
 
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && keyAlternate == false)
         {
-            speedIncreaseAmount *= 1.3f;
+            speedIncreaseAmount *= 1.25f;
             speed += speedIncreaseAmount;
             keyAlternate = true;
         }
         else if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && keyAlternate == true)
         {
-            speedIncreaseAmount *= 1.3f;
+            speedIncreaseAmount *= 1.25f;
             speed += speedIncreaseAmount;
             keyAlternate = false;
         }

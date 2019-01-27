@@ -33,7 +33,7 @@ public class EnviroAudioSource : MonoBehaviour {
 			audiosrc.loop = true;
 			audiosrc.volume = 0f;
 		}
-
+        if (EnviroSky.instance == null) return;
 		currentAmbientVolume = EnviroSky.instance.Audio.ambientSFXVolume;
 		currentWeatherVolume = EnviroSky.instance.Audio.weatherSFXVolume;
     }
@@ -55,6 +55,7 @@ public class EnviroAudioSource : MonoBehaviour {
 
 	void Update ()
 	{
+        if (!EnviroSky.instance) return;
 		if (!EnviroSky.instance.started || EnviroSky.instance == null)
 			return;
 
