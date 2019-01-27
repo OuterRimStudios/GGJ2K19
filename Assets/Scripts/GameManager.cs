@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameObject outOfControlGame;
     public GameObject chaseGame;
-
+    public GameObject winRoom;
     public GameObject gameOverRoom;
     public Animator gameOverAnimator;
     public Animator cameraAnimator;
@@ -29,6 +29,13 @@ public class GameManager : MonoBehaviour
         blinkEffect.Blink();
         outOfControlGame.SetActive(false);
         chaseGame.SetActive(true);
+    }
+
+    public void Win()
+    {
+        outOfControlGame.SetActive(false);
+        chaseGame.SetActive(false);
+        winRoom.SetActive(true);
     }
 
     public void GameOver()
