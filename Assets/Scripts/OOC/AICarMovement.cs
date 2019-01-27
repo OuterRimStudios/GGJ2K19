@@ -5,6 +5,7 @@ using UnityEngine;
 public class AICarMovement : MonoBehaviour
 {
     public float speed;
+    public AudioSource hornSource;
 
     private void Update()
     {
@@ -15,6 +16,7 @@ public class AICarMovement : MonoBehaviour
     {
         if(other.tag.Equals("Player"))
         {
+            //hornSource.PlayOneShot(hornSource.clip);
             GameManager.Instance.GameOver();
             OutOfControlManager.Instance.GameOver();
         }
