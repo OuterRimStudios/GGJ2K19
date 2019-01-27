@@ -1,0 +1,365 @@
+fileFormatVersion: 2
+guid: 826a34a3c5cc4c14abb950c0fee1070a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box001
+    100004: Box002
+    100006: Box003
+    100008: Box005
+    100010: Box006
+    100012: Box007
+    100014: Box009
+    100016: Box010
+    100018: Box011
+    100020: Box012
+    100022: Box013
+    100024: Box014
+    100026: Box015
+    100028: Box016
+    100030: Box017
+    100032: Box018
+    100034: Box019
+    100036: Box020
+    100038: Box021
+    100040: Box022
+    100042: Box023
+    100044: Box024
+    100046: Box025
+    100048: Box026
+    100050: Box027
+    100052: Box028
+    100054: Box029
+    100056: Box030
+    100058: Cylinder001
+    100060: Cylinder002
+    100062: Cylinder003
+    100064: Cylinder004
+    100066: Cylinder005
+    100068: Cylinder006
+    100070: Object001
+    100072: Plane001
+    100074: Plane002
+    100076: Plane003
+    100078: Sphere001
+    100080: Sphere002
+    400000: //RootNode
+    400002: Box001
+    400004: Box002
+    400006: Box003
+    400008: Box005
+    400010: Box006
+    400012: Box007
+    400014: Box009
+    400016: Box010
+    400018: Box011
+    400020: Box012
+    400022: Box013
+    400024: Box014
+    400026: Box015
+    400028: Box016
+    400030: Box017
+    400032: Box018
+    400034: Box019
+    400036: Box020
+    400038: Box021
+    400040: Box022
+    400042: Box023
+    400044: Box024
+    400046: Box025
+    400048: Box026
+    400050: Box027
+    400052: Box028
+    400054: Box029
+    400056: Box030
+    400058: Cylinder001
+    400060: Cylinder002
+    400062: Cylinder003
+    400064: Cylinder004
+    400066: Cylinder005
+    400068: Cylinder006
+    400070: Object001
+    400072: Plane001
+    400074: Plane002
+    400076: Plane003
+    400078: Sphere001
+    400080: Sphere002
+    2100000: Bedroom Walls
+    2100002: Bedroom Floor
+    2100004: Mattress
+    2100006: Bed Feet
+    2100008: Nightstands
+    2100010: Bedroom Hardware
+    2100012: Bedroom Door
+    2100014: Windoow Cross sections
+    2100016: Bedroom Windows
+    2100018: Lamp Base
+    2100020: Lampshades
+    2100022: Molding
+    2100024: Wall Outside Door
+    2300000: Box002
+    2300002: Box003
+    2300004: Box005
+    2300006: Box006
+    2300008: Box007
+    2300010: Box009
+    2300012: Box010
+    2300014: Box011
+    2300016: Box012
+    2300018: Box013
+    2300020: Box014
+    2300022: Box015
+    2300024: Box016
+    2300026: Box017
+    2300028: Box018
+    2300030: Box019
+    2300032: Box020
+    2300034: Box021
+    2300036: Box022
+    2300038: Box023
+    2300040: Box024
+    2300042: Box025
+    2300044: Box026
+    2300046: Box027
+    2300048: Box028
+    2300050: Box029
+    2300052: Box030
+    2300054: Cylinder001
+    2300056: Cylinder002
+    2300058: Cylinder003
+    2300060: Cylinder004
+    2300062: Cylinder005
+    2300064: Cylinder006
+    2300066: Object001
+    2300068: Plane001
+    2300070: Plane002
+    2300072: Plane003
+    2300074: Sphere001
+    2300076: Sphere002
+    3300000: Box002
+    3300002: Box003
+    3300004: Box005
+    3300006: Box006
+    3300008: Box007
+    3300010: Box009
+    3300012: Box010
+    3300014: Box011
+    3300016: Box012
+    3300018: Box013
+    3300020: Box014
+    3300022: Box015
+    3300024: Box016
+    3300026: Box017
+    3300028: Box018
+    3300030: Box019
+    3300032: Box020
+    3300034: Box021
+    3300036: Box022
+    3300038: Box023
+    3300040: Box024
+    3300042: Box025
+    3300044: Box026
+    3300046: Box027
+    3300048: Box028
+    3300050: Box029
+    3300052: Box030
+    3300054: Cylinder001
+    3300056: Cylinder002
+    3300058: Cylinder003
+    3300060: Cylinder004
+    3300062: Cylinder005
+    3300064: Cylinder006
+    3300066: Object001
+    3300068: Plane001
+    3300070: Plane002
+    3300072: Plane003
+    3300074: Sphere001
+    3300076: Sphere002
+    4300000: Box002
+    4300002: Box003
+    4300004: Cylinder001
+    4300006: Cylinder002
+    4300008: Cylinder003
+    4300010: Cylinder004
+    4300012: Box005
+    4300014: Box006
+    4300016: Box007
+    4300018: Box009
+    4300020: Box010
+    4300022: Box011
+    4300024: Box012
+    4300026: Box013
+    4300028: Box014
+    4300030: Box015
+    4300032: Box016
+    4300034: Box017
+    4300036: Box018
+    4300038: Box019
+    4300040: Box020
+    4300042: Box021
+    4300044: Box022
+    4300046: Box023
+    4300048: Box024
+    4300050: Box025
+    4300052: Box026
+    4300054: Box027
+    4300056: Box028
+    4300058: Box029
+    4300060: Plane001
+    4300062: Plane002
+    4300064: Plane003
+    4300066: Sphere001
+    4300068: Cylinder005
+    4300070: Cylinder006
+    4300072: Sphere002
+    4300074: Box030
+    4300076: Object001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bed Feet
+    second: {fileID: 2100000, guid: a04bc443c51e87c4bb1dd822489af155, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bedroom Door
+    second: {fileID: 2100000, guid: 402567cd5da1af04e9f2e66c88540b91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bedroom Floor
+    second: {fileID: 2100000, guid: 863783248a4f34542a261094ff796f79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bedroom Hardware
+    second: {fileID: 2100000, guid: c69b06307c571444da562fedd0b426db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bedroom Walls
+    second: {fileID: 2100000, guid: a5617c7490153374eac4d20703b5d425, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bedroom Windows
+    second: {fileID: 2100000, guid: 301fa3f85ec07ce4b85c45b818326d94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamp Base
+    second: {fileID: 2100000, guid: 1984df00acf204b48b31eb0fa6c3c786, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lampshades
+    second: {fileID: 2100000, guid: ca3aa51d0b9c51d419b99280ab1ae996, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mattress
+    second: {fileID: 2100000, guid: 35e253726a8f24744b7e035b87492bcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Molding
+    second: {fileID: 2100000, guid: 3ff12e3d395d59f4fbfdf6fc4f7a1c47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nightstands
+    second: {fileID: 2100000, guid: d230293efb918f344b273599b278d546, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall Outside Door
+    second: {fileID: 2100000, guid: afb07f56649fcaf4eb3f11454b4c08ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windoow Cross sections
+    second: {fileID: 2100000, guid: f4aae66b86a73cf48818ba45598f80a7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

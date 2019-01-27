@@ -8,8 +8,14 @@ public class AIChaseMovement : MonoBehaviour
     public float startDelay;
 
     bool start;
+    bool waitForDelay;
 
-    IEnumerator Start()
+    private void Start()
+    {
+        waitForDelay = true;
+    }
+
+    IEnumerator Delay()
     {
         yield return new WaitForSeconds(startDelay);
         start = true;
@@ -17,6 +23,15 @@ public class AIChaseMovement : MonoBehaviour
 
     private void Update()
     {
+        if(waitForDelay)
+        {
+            if(Input.GetAxis("Horizontal") != 0)
+            {
+                waitForDelay = false;
+                StartCoroutine(Delay());
+            }
+        }
+
         if (!start) return;
         transform.position += transform.forward * speed * Time.deltaTime;
     }

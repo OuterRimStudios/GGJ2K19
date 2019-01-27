@@ -16,6 +16,7 @@ public class CarMovement : MonoBehaviour
     float xMove;
     bool stopMove;
     bool arrived;
+    bool done;
 
     private void Awake()
     {
@@ -33,6 +34,12 @@ public class CarMovement : MonoBehaviour
         {
             if (Utilities.CheckDistance(transform.position, stopLocation.position) > .1f)
                 transform.position = Vector3.Lerp(transform.position, stopLocation.position, autoMoveSpeed * Time.unscaledDeltaTime);
+            else if(!done)
+            {
+                done = true;
+                GameManager.Instance.Transition();
+            }
+
         }
     }
 
