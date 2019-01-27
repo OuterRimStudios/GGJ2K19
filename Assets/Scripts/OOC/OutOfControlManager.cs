@@ -40,7 +40,7 @@ public class OutOfControlManager : MonoBehaviour
         startTime = Time.time;
         yield return new WaitUntil(CheckTime);
         CarMovement.Instance.Arrived();
-        CarSpawner.CanSpawn = false;
+        CarSpawner.Instance.CanSpawn = false;
         Time.timeScale = 1;     //reset timescale
         StopAllCoroutines();
 

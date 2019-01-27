@@ -27,16 +27,21 @@ public class GameManager : MonoBehaviour
 
     public void Transition()
     {
-        blinkEffect.Blink();
         outOfControlGame.SetActive(false);
         chaseGame.SetActive(true);
     }
 
     public void Win()
     {
-        outOfControlGame.SetActive(false);
+        StartCoroutine(WinTransition());
+    }
+
+    IEnumerator WinTransition()
+    {
         chaseGame.SetActive(false);
         winRoom.SetActive(true);
+        yield return new WaitForSeconds(4);
+        //Alarm stuff
     }
 
     public void GameOver()

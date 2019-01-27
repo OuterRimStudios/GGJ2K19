@@ -8,6 +8,9 @@ public class CarMovement : MonoBehaviour
     public Transform stopLocation;
     public float autoMoveSpeed;
     public Animator wheelAnimator;
+    public Animator handAnimator;
+    public float grabSpeed;
+    public Animator fadeAnimator;
 
     public float speed;
     public float clamp;
@@ -18,9 +21,13 @@ public class CarMovement : MonoBehaviour
     bool arrived;
     bool done;
 
+    float fakeDistance;
+
     private void Awake()
     {
         Instance = this;
+        fakeDistance = 100;
+        handAnimator.SetFloat("Distance", fakeDistance);
     }
 
     private void Update()
@@ -32,15 +39,32 @@ public class CarMovement : MonoBehaviour
             Move();
         else
         {
-            if (Utilities.CheckDistance(transform.position, stopLocation.position) > .1f)
-                transform.position = Vector3.Lerp(transform.position, stopLocation.position, autoMoveSpeed * Time.unscaledDeltaTime);
-            else if(!done)
+            transform.position = Vector3.Lerp(transform.position, stopLocation.position, autoMoveSpeed * Time.unscaledDeltaTime);
+            if(Utilities.CheckDistance(transform.position, stopLocation.position) < 14f && !done)
             {
                 done = true;
-                GameManager.Instance.Transition();
+                StartCoroutine(Grab());
             }
 
         }
+    }
+
+    IEnumerator Grab()
+    {
+        yield return new WaitUntil(WaitForGrab);
+        print("Grabbed");
+        GameManager.Instance.Transition();
+    }
+
+    bool WaitForGrab()
+    {
+        fakeDistance -= grabSpeed * Time.deltaTime;
+        print(fakeDistance);
+        handAnimator.SetFloat("Distance", fakeDistance);
+        fadeAnimator.SetTrigger("Fade");
+        if (fakeDistance <= 0)
+            return true;
+        else return false;
     }
 
     private void Move()

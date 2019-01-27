@@ -1,20 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarSpawner : MonoBehaviour
 {
+    public static CarSpawner Instance;
     public GameObject car;
     public List<Transform> spawnPositions;
     public int minSpawn;
     public int maxSpawn;
     public float spawnInterval;
 
-    public static bool CanSpawn;
+    public bool CanSpawn;
     bool spawning;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(5.5f);
         CanSpawn = true;
     }
 
