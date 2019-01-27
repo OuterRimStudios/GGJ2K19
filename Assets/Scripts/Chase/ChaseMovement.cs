@@ -32,7 +32,6 @@ public class ChaseMovement : MonoBehaviour {
     void Update()
     {
         isGrounded = Grounded();
-        print(isGrounded);
 
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && keyAlternate == false)
         {
@@ -46,9 +45,7 @@ public class ChaseMovement : MonoBehaviour {
             speed += speedIncreaseAmount;
             keyAlternate = false;
         }
-
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("Speed", speed, animationSmoothTime, Time.unscaledDeltaTime);
+        
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             Jump();
@@ -60,10 +57,14 @@ public class ChaseMovement : MonoBehaviour {
         }
 
         speedIncreaseAmount = Mathf.Lerp(speedIncreaseAmount, 1, speedDecreaseAmount * Time.unscaledDeltaTime);
-        speed = Mathf.Lerp(speed, 0, 5f * Time.unscaledDeltaTime);
+        if (isGrounded)
+            speed = Mathf.Lerp(speed, 0, 5f * Time.unscaledDeltaTime);
+
         transform.position = Vector3.Lerp(transform.position, transform.position + transform.forward, speed * Time.unscaledDeltaTime);
-        transform.position += new Vector3(0, verticalVelocity * Time.unscaledDeltaTime, 0);
+        transform.position += new Vector3(0, verticalVelocity * Time.unscaledDeltaTime, 0) + transform.forward * jumpSpeed * Time.unscaledDeltaTime;
         Fall();
+
+        animator.SetFloat("Speed", speed, animationSmoothTime, Time.unscaledDeltaTime);
     }
 
     void Jump()

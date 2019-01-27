@@ -9,13 +9,14 @@ public class OutOfControlManager : MonoBehaviour
     public static OutOfControlManager Instance;
     public Slider distanceSlider;
     public TextMeshProUGUI distanceText;
+    public Animator speedometerAnimator;
+    public float animationSmoothTime;
 
     public float timeScaleMax = 1.5f;
 
     public float timeToHome = 30f;
     float startTime;
-
-    public GameObject gameOverPanel;
+    
     public Animator house;
 
     [HideInInspector]
@@ -25,6 +26,7 @@ public class OutOfControlManager : MonoBehaviour
     {
         Instance = this;
         Time.timeScale = 1;
+        speedometerAnimator.SetFloat("Speed", Time.timeScale);
     }
 
     private void Start()
@@ -66,6 +68,7 @@ public class OutOfControlManager : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(15f);
             Time.timeScale = Random.Range(1, timeScaleMax);
+            speedometerAnimator.SetFloat("Speed", Time.timeScale, animationSmoothTime, Time.unscaledDeltaTime);
         }
     }
 
@@ -84,6 +87,5 @@ public class OutOfControlManager : MonoBehaviour
     public void GameOver()
     {
         StopAllCoroutines();
-        gameOverPanel.SetActive(true);
     }
 }
